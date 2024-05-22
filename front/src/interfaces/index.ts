@@ -1,8 +1,24 @@
+type Categories = 'Salud' | 'Trabajo' | 'Estudio'
 export interface Habit {
     id: string
-    fechaInicio: Date
-    fechaFinal?: Date
     titulo: string
     descripcion?: string
-    category: 'Salud' | 'Trabajo' | 'Estudio'
+    category: Categories 
+}
+
+interface User {
+    id: string
+    email: string
+    contraseña: string
+    habitos: Habit[]
+}
+
+type Status = 'completado' | 'en progreso' | 'incompleto'
+interface Progress {
+    id: string
+    habit: Habit
+    habitId: string
+    status: Status
+    fechaInicio: Date
+    fechaFinal?: Date
 }
