@@ -15,5 +15,3 @@ export const useHabit = create<HabitStore>((set, get) => ({
     set({ habits: [...habits, habit] });
   },
 }));
-
-// probando rama
