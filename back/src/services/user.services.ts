@@ -1,7 +1,6 @@
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "../config/db";
 import { User } from "../config/types";
 
-const prisma = new PrismaClient();
 type partialUser = Partial<User>;
 
 export const findAllUser = async () => {

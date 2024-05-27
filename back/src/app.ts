@@ -1,14 +1,7 @@
 import express from "express";
-import morgan from "morgan";
-import cors from "cors";
 import { indexRouter } from "./routes/index.routes";
+import { appMiddlewares } from "./middlewares";
 
 export const app = express();
-app.use(express.json());
-app.use(morgan("dev"));
-app.use(
-    express.urlencoded({
-        extended: true,
-    }),
-);
+appMiddlewares(app);
 app.use("/api", indexRouter);

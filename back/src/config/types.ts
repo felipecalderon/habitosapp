@@ -1,11 +1,4 @@
 type Categories = "Salud" | "Trabajo" | "Estudio";
-export interface Habit {
-    id: string;
-    titulo: string;
-    descripcion?: string;
-    category: Categories;
-}
-
 export interface User {
     id: string;
     email: string;
@@ -13,6 +6,14 @@ export interface User {
     habitos: Habit[];
     name: string;
     lastname: string;
+}
+
+export interface Habit {
+    id: string;
+    titulo: string;
+    descripcion?: string;
+    category: Categories;
+    progress?: Progress[];
 }
 
 type Status = "completado" | "en progreso" | "incompleto";

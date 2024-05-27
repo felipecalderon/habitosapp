@@ -29,6 +29,14 @@ model Habit {
   titulo String // no es typescript, es prisma
   descripcion String?
   category String
-
+  progress Progress[]
 }
 
+model Progress {
+  id String  @id @default(auto()) @map("_id") @db.ObjectId
+  habit Habit @relation(fields: [habitId], references: [id])
+  habitId String @db.ObjectId
+  status String
+  fechaInicio String
+  fechaFinal String
+}

@@ -1,5 +1,5 @@
-type Categories = "Salud" | "Trabajo" | "Estudio";
-type Status = "completado" | "en progreso" | "incompleto";
+export type Categories = "Salud" | "Trabajo" | "Estudio";
+export type Status = "completado" | "en progreso" | "incompleto";
 
 export interface Habit {
     id: string;
