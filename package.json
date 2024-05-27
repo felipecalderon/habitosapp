@@ -1,0 +1,14 @@
+{
+  "name": "habitos-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write 'back/**/*.{js,ts,tsx,md}' 'front/**/*.{js,ts,tsx,md}'",
+    "back": "cd back && nodemon index.ts",
+    "front": "cd front && npx next dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
