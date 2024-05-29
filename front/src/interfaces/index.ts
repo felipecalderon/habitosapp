@@ -11,7 +11,9 @@ export interface Habit {
 export interface User {
     id: string;
     email: string;
-    contraseña: string;
+    password: string;
+    name: string;
+    lastname: string;
     habitos: Habit[];
 }
 
